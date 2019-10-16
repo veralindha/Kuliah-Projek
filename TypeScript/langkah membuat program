@@ -1,0 +1,32 @@
+                                    LANGKAH MEMBUAT PROGRAM
+-analisa variabel/type data ( kapan kita masuk pada function, integer dan lain lain)
+-algortima
+-kode pemrograman
+
+                        ALGORITMA
+didalam algortima ada 3 yaitu:
+1. deskriptif : yang berisi bahasa sehari hari
+2. flowchart : yang berbentuk bagan
+3. pseudocode : yang berisi tentang bahasa pemrograman
+
+contoh deskriptif
+pak rumahnya pak fuad dimana ya?
+ohh...samean lurus aja, ada pertigaan belok kiri, rumah ketiga arah kekiri setelah kantor pos
+deskriptif :
+-ditulis dari point ke point
+-tidak ambigu (harus jelas)
+-menggunakan sehari hari
+
+
+contoh flowchart 
+membuat bagan tentang pemrograman itu sendiri
+
+contoh pseudocode
+membuat suatu data yang seperti flowchart namun berbentuk kode
+function total pembayaran()
+{
+    banyak siswa=input("banyaksiswa")
+    spp=input("spp")
+        total pembayaran=hitungtotalpembayaran(banyaksiswa x spp)
+    tampilkan(total pembayaran)
+}

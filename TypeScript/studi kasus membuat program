@@ -1,0 +1,27 @@
+                                    contoh soal
+sebuah lemabaga pendidikan mempunyai 300 siswa, menerapkan kebijakan pembayaran spp secara dinamis antara Rp. 25.000 sampai Rp, 50.000 per bulan. dan yang membayar spp tiap bulan minimal 270 siswa
+
+buatlah algoritma untuk menghitung total pembayaran yang diterima oleh lemabaga setiap bulan
+
+langkah langkah :
+- analisa variabel :
+    total pembayaran = banyak siswa kali spp
+        banyak siswa (antara 270 sampai 300)
+        spp (antara 25.000 sampai 50.000)
+    jadi kita bisa membuat 3 variabel
+-algoritma :
+    -input banyak siswa
+    -input spp
+    -hitung total pembayaran(proses)
+        total pembayaran=banyak siswa x spp
+    -output(tampilkan total pembayaran)
+ artinya ada 2 buah input, 1 proses, 1 output
+ yang berarti kita bisa membuat 4 function
+-pseudocode :
+function total pembayaran()
+{
+    banyak siswa=input("banyaksiswa")
+    spp=input("spp")
+        total pembayaran=hitungtotalpembayaran(banyaksiswa x spp)
+    tampilkan(total pembayaran)
+}
