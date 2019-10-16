@@ -1,0 +1,188 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FUTSAL</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="qrcode.js"></script>
+    <style>
+        body {
+            background-color: #c0c0c0
+        }
+    </style>
+    <style>
+    .btn_style{
+        border: 1px solid black;
+        border-radius: 3px;
+        padding: 6px 20px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+        color: white;
+        background-color: burlywood;
+        cursor: pointer;
+    }
+    .btn_style:hover
+    {
+        border: 1px solid #b1b1b1;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    }
+    </style>
+    <style>
+    button { font: arial}
+    button { font-size: 15px;}
+    </style>
+    <style>
+    select {
+        border: 1px solid blue;
+        border-radius: 3px;
+        padding: 3px 5px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+        color: white;
+        background-color: rgb(209, 194, 60);
+        cursor: pointer;
+        font-style: initial;
+    }
+    .masukan{
+	padding: 3px 3px;
+	margin-top: 30px;
+    }
+    </style>
+</head>
+<body>
+<center>
+    <h1><u>BOOKING FUTSAL</h1></u>
+<table border="1" aria-colspan="3" bgcolor=#ffc0cb>
+    <thead>
+        <th>Jam</th>
+        <th>Senin</th>
+        <th>Selasa</th>
+        <th>Rabu</th>
+        <th>Kamis</th>
+        <th>Jum'at</th>
+        <th>Sabtu</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="width: 100px">09:00 - 10:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10:00 - 11:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11:00 - 12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>12:00 - 13:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>13:00 - 14:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table><br><br>
+    <table >
+        <thead></thead>
+        <tbody>
+        <tr>
+        <td style="width: 120px"><label>Hari</label></td>
+        <td>:</td>
+        <td><select name="hari" id="hari1" style="text-align:right">
+            <option>Senin</option>
+            <option>Selasa</option>
+            <option>Rabu</option>
+            <option>Kamis</option>
+            <option>Jum'at</option>
+            <option>Sabtu</option>
+        </td>
+        </tr>
+        </select><br>
+        <tr>
+            <td><label>Jam</label></td>
+        <td>:</td>
+        <td><select name="jam" id="jam1">
+            <option>09:00</option>
+            <option>10:00</option>
+            <option>11:00</option>
+            <option>12:00</option>
+            <option>13:00</option>
+        </select>
+        </td>
+        </tr>
+        <tr>
+            <td><label>Banyak Jam :</label></td>
+            <td>:</td>
+                <td><select>
+                    <option>1 jam</option>
+                    <option>2 jam</option>
+                    <option>3 jam</option>
+                    <option>4 jam</option>
+                    <option>5 jam</option>
+                </select>
+            </td>
+        </tr>
+        </tbody>
+    </table><br><br>
+    <button class="btn_style"><a href="index.html" style="text-decoration: none">BOOKING</a></button>
+</center>
+<center>
+    <input id="text" type="text"  style="width:30%" placeholder="masukan nama tanpa spasi :)" class="masukan"/><br />
+    <div id="qrcode" style="width:200px; height:200px; margin-top:5px;"></div>
+    
+    <script type="text/javascript">
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        width : 100,
+        height : 100
+    });
+    alert('tunjukan kode batang ketika mau futsal');
+    function makeCode () {		
+        var elText = document.getElementById("text");
+        qrcode.makeCode(elText.value);
+    }
+    
+    makeCode();
+    
+    $("#text").
+        on("blur", function () {
+            makeCode();
+        }).
+        on("keydown", function (e) {
+            if (e.keyCode == 13) {
+                makeCode();
+            }
+        });
+    
+        
+    
+    </script>
+</center>
+ </body>
+</html>
